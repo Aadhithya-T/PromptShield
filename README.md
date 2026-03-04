@@ -1,4 +1,4 @@
-# 🛡️ PromptShield
+# PromptShield
 
 PromptShield is a prompt security middleware for LLMs. It uses a fine-tuned DistilBERT classifier to label incoming prompts as **safe**, **unsafe**, **suspicious**, or **jailbreak** before forwarding to Google Gemini 2.5 Flash.
 
