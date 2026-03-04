@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PromptShield</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/reset.css"/>
+  <link rel="stylesheet" href="css/variables.css"/>
+  <link rel="stylesheet" href="css/layout.css"/>
+  <link rel="stylesheet" href="css/components.css"/>
+  <link rel="stylesheet" href="css/status.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+</head>
+<body>
+  <div class="shell">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 1L2 4v4c0 3.3 2.5 6.4 6 7 3.5-.6 6-3.7 6-7V4L8 1z" fill="currentColor"/>
+          </svg>
+        </div>
+        PromptShield
+      </div>
+      <span class="tagline">// LLM security middleware</span>
+      <span class="version">v1.0.0</span>
+    </header>
+
+    <!-- Input Section -->
+    <section class="card input-card" id="input-section">
+      <div class="field-label">Prompt Input</div>
+      <textarea
+        id="prompt-input"
+        placeholder="Enter a prompt to analyze..."
+        maxlength="2000"
+        spellcheck="false"
+      ></textarea>
+      <div class="actions">
+        <span class="char-count"><span id="char-num">0</span> / 2000</span>
+        <button class="analyze-btn" id="analyze-btn" disabled>
+          <span class="spinner"></span>
+          <span class="btn-label">Analyze →</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Result Panel -->
+    <div id="result-panel">
+
+      <!-- Classification Result -->
+      <div class="card result-card" id="classification-card">
+        <div class="result-header">
+          <span class="status-dot" id="status-dot"></span>
+          <span class="status-badge" id="status-badge"></span>
+          <span class="result-label" id="result-label"></span>
+          <span class="result-meta" id="result-meta"></span>
+        </div>
+        <p class="result-message" id="result-message"></p>
+
+        <!-- Confidence Scores -->
+        <div class="confidence-section">
+          <div class="field-label">Confidence Scores</div>
+          <div class="confidence-bars" id="confidence-bars">
+            <!-- injected by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Gemini Response (safe only) -->
+      <div class="card gemini-card" id="gemini-card">
+        <div class="gemini-header">
+          <div class="field-label">Gemini Response</div>
+          <span class="gemini-model">gemini-2.5-flash</span>
+        </div>
+        <div class="gemini-body" id="gemini-body">
+          <div class="gemini-loading" id="gemini-loading">
+            <div class="pulse-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span>Forwarding to Gemini...</span>
+          </div>
+          <div class="gemini-response" id="gemini-response"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <span>PromptShield · DistilBERT · 4-class classifier</span>
+      <span id="footer-status" class="footer-status online">● model loaded</span>
+    </footer>
+
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/classifier.js"></script>
+  <script src="js/gemini.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
