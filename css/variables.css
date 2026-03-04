@@ -1,0 +1,53 @@
+:root {
+  /* Base */
+  --bg:           #f4f3f0;
+  --surface:      #ffffff;
+  --border:       #e2deda;
+  --border-focus: #b8b4ae;
+
+  /* Typography */
+  --text:         #181816;
+  --muted:        #878480;
+  --subtle:       #b0ada8;
+
+  /* Fonts */
+  --mono: 'IBM Plex Mono', monospace;
+  --sans: 'IBM Plex Sans', sans-serif;
+
+  /* Status — Safe */
+  --safe:         #166534;
+  --safe-bg:      #f0fdf4;
+  --safe-border:  #bbf7d0;
+  --safe-bar:     #22c55e;
+  --safe-dot:     #16a34a;
+
+  /* Status — Unsafe */
+  --unsafe:       #991b1b;
+  --unsafe-bg:    #fff1f2;
+  --unsafe-border:#fecdd3;
+  --unsafe-bar:   #ef4444;
+  --unsafe-dot:   #dc2626;
+
+  /* Status — Suspicious */
+  --susp:         #92400e;
+  --susp-bg:      #fffbeb;
+  --susp-border:  #fde68a;
+  --susp-bar:     #f59e0b;
+  --susp-dot:     #d97706;
+
+  /* Status — Jailbreak */
+  --jail:         #581c87;
+  --jail-bg:      #faf5ff;
+  --jail-border:  #e9d5ff;
+  --jail-bar:     #a855f7;
+  --jail-dot:     #9333ea;
+
+  /* Radii */
+  --radius-sm:    4px;
+  --radius:       7px;
+  --radius-lg:    10px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  --shadow:    0 4px 12px rgba(0,0,0,.07), 0 1px 3px rgba(0,0,0,.05);
+}

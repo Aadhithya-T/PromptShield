@@ -1,0 +1,287 @@
+/* ── Cards ── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 14px;
+}
+
+.input-card {
+  padding: 24px;
+  animation: fadeUp 0.4s 0.07s ease both;
+}
+
+/* ── Field Label ── */
+.field-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.field-label::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: var(--text);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Textarea ── */
+textarea {
+  width: 100%;
+  min-height: 118px;
+  resize: vertical;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 13px 15px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.75;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+
+textarea::placeholder {
+  color: var(--subtle);
+}
+
+textarea:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+/* ── Actions Row ── */
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+
+.char-count {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--subtle);
+}
+
+/* ── Analyze Button ── */
+.analyze-btn {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  background: var(--text);
+  color: var(--bg);
+  border-radius: var(--radius);
+  padding: 9px 22px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.15s, transform 0.12s;
+}
+
+.analyze-btn:hover:not(:disabled) {
+  opacity: 0.82;
+}
+
+.analyze-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.analyze-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* ── Spinner ── */
+.spinner {
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-top-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: none;
+  animation: spin 0.55s linear infinite;
+}
+
+.loading .spinner   { display: block; }
+.loading .btn-label { display: none; }
+
+/* ── Result Card ── */
+.result-card {
+  overflow: hidden;
+}
+
+.result-header {
+  padding: 15px 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status-badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+}
+
+.result-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.result-meta {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--subtle);
+}
+
+.result-message {
+  padding: 14px 22px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  line-height: 1.6;
+}
+
+/* ── Confidence Bars ── */
+.confidence-section {
+  padding: 18px 22px 20px;
+}
+
+.confidence-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.conf-row {
+  display: grid;
+  grid-template-columns: 88px 1fr 46px;
+  align-items: center;
+  gap: 12px;
+}
+
+.conf-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.conf-track {
+  height: 5px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.conf-fill {
+  height: 100%;
+  border-radius: 99px;
+  width: 0%;
+  transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.conf-pct {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  text-align: right;
+}
+
+/* ── Gemini Card ── */
+.gemini-card {
+  padding: 22px;
+}
+
+.gemini-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.gemini-header .field-label {
+  margin-bottom: 0;
+}
+
+.gemini-model {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--subtle);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.gemini-body {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  min-height: 80px;
+}
+
+.gemini-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--subtle);
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
+.pulse-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.pulse-dots span {
+  width: 6px;
+  height: 6px;
+  background: var(--subtle);
+  border-radius: 50%;
+  animation: pulseDot 1.2s ease-in-out infinite;
+}
+
+.pulse-dots span:nth-child(2) { animation-delay: 0.2s; }
+.pulse-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+.gemini-response {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.75;
+  white-space: pre-wrap;
+  display: none;
+}

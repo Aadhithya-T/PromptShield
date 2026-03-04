@@ -1,0 +1,25 @@
+/* ── Safe ── */
+.status-safe .status-dot        { background: var(--safe-dot); }
+.status-safe .status-badge      { background: var(--safe-bg); color: var(--safe); border-color: var(--safe-border); }
+.status-safe .result-label      { color: var(--safe); }
+
+/* ── Unsafe ── */
+.status-unsafe .status-dot      { background: var(--unsafe-dot); }
+.status-unsafe .status-badge    { background: var(--unsafe-bg); color: var(--unsafe); border-color: var(--unsafe-border); }
+.status-unsafe .result-label    { color: var(--unsafe); }
+
+/* ── Suspicious ── */
+.status-suspicious .status-dot  { background: var(--susp-dot); }
+.status-suspicious .status-badge{ background: var(--susp-bg); color: var(--susp); border-color: var(--susp-border); }
+.status-suspicious .result-label{ color: var(--susp); }
+
+/* ── Jailbreak ── */
+.status-jailbreak .status-dot   { background: var(--jail-dot); }
+.status-jailbreak .status-badge { background: var(--jail-bg); color: var(--jail); border-color: var(--jail-border); }
+.status-jailbreak .result-label { color: var(--jail); }
+
+/* ── Bar fill colors ── */
+.fill-safe        { background: var(--safe-bar); }
+.fill-unsafe      { background: var(--unsafe-bar); }
+.fill-suspicious  { background: var(--susp-bar); }
+.fill-jailbreak   { background: var(--jail-bar); }
